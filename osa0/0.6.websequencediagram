@@ -1,0 +1,19 @@
+title Fullstack open tehtävä 0.6
+
+note over selain:
+Käyttäjä kirjoittaa muistiinpanon tekstikenttään ja klikkaa Lähetä-painiketta
+end note
+note over selain:
+selain suorittaa javascript koodia
+ja lisää listaan uuden muistiinpanon
+end note
+note over selain:
+selain lähettää uuden muistiinpanon palvelimelle
+end note
+selain->palvelin: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+note right of selain:
+JSON {content: "aaa", date: "2023-01-14T10:26:18.366Z"}
+end note
+
+palvelin-->selain: Status code 201 {"message":"note created"}
+
